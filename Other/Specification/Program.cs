@@ -25,6 +25,7 @@ namespace Specification
                 new Car{Color = "white",Price = 2999000,Vendor = "mersedes"},
             };
             ISpecification<Car> redCheapCarSpec = new RedCarSpecification().And(new CheapCarSpecification());
+            Console.WriteLine("cheap red cars is:");
             foreach (Car car in cars)
             {
                 if (redCheapCarSpec.IsSatisfiedBy(car))
@@ -32,6 +33,26 @@ namespace Specification
                     Console.WriteLine(car.ToString());
                 }
             }
+
+            ISpecification<Car> redCheapMersedesSpec = new RedCarSpecification().And(new CheapCarSpecification()).And(new MersedesCarSpecification());
+            Console.WriteLine("cheap red mersedes is:");
+            foreach (Car car in cars)
+            {
+                if (redCheapMersedesSpec.IsSatisfiedBy(car))
+                {
+                    Console.WriteLine(car.ToString());
+                }
+            }
+            ISpecification<Car> redCheapNotMersedesSpec = new RedCarSpecification().And(new CheapCarSpecification()).Not(new MersedesCarSpecification());
+            Console.WriteLine("cheap red non mersedes is:");
+            foreach (Car car in cars)
+            {
+                if (redCheapNotMersedesSpec.IsSatisfiedBy(car))
+                {
+                    Console.WriteLine(car.ToString());
+                }
+            }
+
             Console.ReadLine();
         }
     }
