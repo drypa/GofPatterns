@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TemplateMethod
 {
-    public class FIleHasher : FileUpdater
+    public class FileHasher : FileUpdater
     {
         protected sealed override string ReadFile(string filePath)
         {
@@ -19,7 +19,7 @@ namespace TemplateMethod
             return Encoding.UTF8.GetString(hash);
         }
 
-        protected sealed override void WritedFile(string filePath, string fileContent)
+        protected sealed override void WriteFile(string filePath, string fileContent)
         {
             File.WriteAllText(filePath, fileContent);
         }

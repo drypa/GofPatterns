@@ -8,11 +8,11 @@ namespace TemplateMethod
         {
             var content = ReadFile(filePath);
             var updatedContent = Convert(content);
-            WritedFile(filePath, updatedContent);
+            WriteFile(filePath, updatedContent);
         }
 
         protected abstract string ReadFile(string filePath);
         protected abstract string Convert(string fileContent);
-        protected abstract void WritedFile(string filePath, string fileContent);
+        protected abstract void WriteFile(string filePath, string fileContent);
     }
 }
