@@ -12,7 +12,17 @@ namespace Mediator
             this.alarmer = alarmer;
             this.calculator = calculator;
 
-            this.calculator.ItIsTimeToBrake += (sender, args) => this.alarmer.Alarm();
+            
+        }
+
+        public void Start()
+        {
+            calculator.ItIsTimeToBrake += OnItIsTimeToBrake;
+        }
+
+        private void OnItIsTimeToBrake(object sender, EventArgs e)
+        {
+            alarmer.Alarm();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Mediator
 
         public BreakCalculator(int brakeIntervalInSeconds)
         {
-            timer = new Timer { Interval = brakeIntervalInSeconds * brakeIntervalInSeconds };
+            timer = new Timer { Interval = brakeIntervalInSeconds * 1000 };
             timer.Elapsed += (sender, args) => OnItIsTimeToBrake();
             timer.Start();
         }
