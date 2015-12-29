@@ -37,8 +37,13 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code.cs" />
+    <Compile Include="CodeMonkey.cs" />
+    <Compile Include="GoodCode.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Programmer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UglyCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
