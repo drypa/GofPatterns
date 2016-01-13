@@ -37,6 +37,12 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessChecker.cs" />
+    <Compile Include="AllowTicketBarrierCommand.cs" />
+    <Compile Include="ForbidTicketBarrierCommand.cs" />
+    <Compile Include="ImportantRoom.cs" />
+    <Compile Include="TicketBarrier.cs" />
+    <Compile Include="TicketBarrierCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
