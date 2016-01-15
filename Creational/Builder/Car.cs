@@ -13,7 +13,7 @@ namespace Builder
 
         public override string ToString()
         {
-            return string.Format("{0}; {1} wheels; {2}; {3}; {4}; {5}", EngineStr(), WheelsCount, CarcaseStr(), FrontBumperStr(), BackBumperStr(), ElectricStr());
+            return string.Format("Car: {0}; {1} wheels; {2}; {3}; {4}; {5}", EngineStr(), WheelsCount, CarcaseStr(), FrontBumperStr(), BackBumperStr(), ElectricStr());
         }
 
         private string BackBumperStr()
