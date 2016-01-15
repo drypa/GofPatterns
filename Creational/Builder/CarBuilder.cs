@@ -2,7 +2,7 @@
 
 namespace Builder
 {
-    internal class CarBuilder
+    internal class CarBuilder : ICarBuilder
     {
         private Car car;
 
