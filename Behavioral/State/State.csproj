@@ -37,6 +37,10 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HealthyState.cs" />
+    <Compile Include="Human.cs" />
+    <Compile Include="IHumanState.cs" />
+    <Compile Include="IllState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
