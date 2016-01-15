@@ -6,13 +6,35 @@ namespace Command
     {
         private static void Main(string[] args)
         {
-            var room = new ImportantRoom();
-            var accessChecker = new AccessChecker(new AllowTicketBarrierCommand(room.Barrier), new ForbidTicketBarrierCommand(room.Barrier));
+            Manipulator manipulator = new Manipulator();
+            Console.WriteLine(manipulator.GetState());
 
-            for (int userIdCard = 0; userIdCard < 10; userIdCard++)
-            {
-                accessChecker.TryEnter(userIdCard);
-            }
+            RemoteController controller = new RemoteController(manipulator);
+            controller.Up(10);
+            Console.WriteLine(manipulator.GetState());
+
+            controller.Left(20);
+            Console.WriteLine(manipulator.GetState());
+
+            controller.Right(10);
+            Console.WriteLine(manipulator.GetState());
+
+
+            controller.Down(30);
+            Console.WriteLine(manipulator.GetState());
+
+
+            controller.UndoLastCommand();
+            Console.WriteLine(manipulator.GetState());
+
+            controller.UndoLastCommand();
+            Console.WriteLine(manipulator.GetState());
+
+            controller.UndoLastCommand();
+            Console.WriteLine(manipulator.GetState());
+
+            controller.UndoLastCommand();
+            Console.WriteLine(manipulator.GetState());
 
             Console.ReadLine();
         }
