@@ -6,12 +6,13 @@ namespace Bridge
     {
         static void Main(string[] args)
         {
-            Cook cook = new Cook { Implementor = new Oven()};
-            var pie = cook.CreatePie();
+            Cook firstCook = new RestaurantCook(new Oven());
+            var pie = firstCook.CreatePie();
             Console.WriteLine(pie.State);
 
-            cook.Implementor = new Stove();
-            pie = cook.CreatePie();
+
+            Cook secondCook = new HomeCook(new Stove());
+            pie = secondCook.CreatePie();
             Console.WriteLine(pie.State);
 
             Console.WriteLine("press <enter> to exit");

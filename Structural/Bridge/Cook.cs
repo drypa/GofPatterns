@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Configuration;
 
 namespace Bridge
 {
-    public class Cook
+    public abstract class Cook
     {
-        public ICooker Implementor { get; set; }
-
-        public Pie CreatePie()
+        protected Cook(ICooker cooker)
         {
-            if (Implementor == null)
-            {
-                throw new ConfigurationErrorsException("Cooker is not defined");
-            }
-            var pie = new Pie();
-            Implementor.Cook(pie);
-            return pie;
+            Implementor = cooker;
         }
+        protected ICooker Implementor { get; set; }
+        public abstract Pie CreatePie();
     }
 }
