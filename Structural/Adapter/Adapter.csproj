@@ -37,8 +37,11 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EuroPlug.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RussianPlug.cs" />
+    <Compile Include="ToRussianPlugAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
