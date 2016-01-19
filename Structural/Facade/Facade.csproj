@@ -39,6 +39,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserManagementFacade.cs" />
+    <Compile Include="UserRepository.cs" />
+    <Compile Include="UserRightsManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
