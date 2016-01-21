@@ -41,7 +41,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoteServer.cs" />
-    <Compile Include="RemoteServerProxy.cs" />
+    <Compile Include="RemoteServerClient.cs" />
+    <Compile Include="RemoteServerClientProxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

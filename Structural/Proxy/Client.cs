@@ -4,16 +4,16 @@ namespace Proxy
 {
     internal class Client
     {
-        private readonly RemoteServer remoteServer;
+        private readonly RemoteServerClient remoteServerClient;
 
-        public Client(RemoteServer remoteServer)
+        public Client(RemoteServerClient remoteServerClient)
         {
-            this.remoteServer = remoteServer;
+            this.remoteServerClient = remoteServerClient;
         }
 
         public void GetDataFromRemoteServer(int yearsAgo)
         {
-            Console.WriteLine(remoteServer.GetData(yearsAgo));
+            Console.WriteLine(remoteServerClient.GetData(yearsAgo));
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Proxy
 {
-    internal class RemoteServerProxy : RemoteServer
+    internal class RemoteServerClientProxy : RemoteServerClient
     {
         private readonly Dictionary<int, string> cache = new Dictionary<int, string>();
         public override string GetData(int yearsAgo)
