@@ -37,6 +37,10 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompositeNode.cs" />
+    <Compile Include="INode.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="NodesFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
