@@ -37,8 +37,12 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddExpression.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="IExpression.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplaceExpression.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
