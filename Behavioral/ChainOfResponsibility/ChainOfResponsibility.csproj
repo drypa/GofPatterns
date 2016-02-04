@@ -37,8 +37,12 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmptyHandler.cs" />
+    <Compile Include="IHandler.cs" />
+    <Compile Include="MiddleLenghtHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VeryLargeHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
