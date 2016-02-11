@@ -37,6 +37,10 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IObservable.cs" />
+    <Compile Include="IObserver.cs" />
+    <Compile Include="Observable.cs" />
+    <Compile Include="Observer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
