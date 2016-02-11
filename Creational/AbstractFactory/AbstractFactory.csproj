@@ -41,11 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BalticBreadFactory.cs" />
+    <Compile Include="BlackBread.cs" />
+    <Compile Include="BlackRyeBread.cs" />
+    <Compile Include="BlackСapitalBread.cs" />
     <Compile Include="Bread.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="FazerFactory.cs" />
     <Compile Include="IBreadFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WhiteBread.cs" />
+    <Compile Include="WhiteRifledBread.cs" />
+    <Compile Include="WhiteUkrainianBread.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

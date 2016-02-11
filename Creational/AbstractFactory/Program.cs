@@ -10,7 +10,7 @@ namespace AbstractFactory
 
             new Client(factory1).Cook();
 
-            IBreadFactory factory2 = new FazerFactory();
+            IBreadFactory factory2 = new BalticBreadFactory();
             new Client(factory2).Cook();
 
             Console.ReadLine();
