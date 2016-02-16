@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AddSpecification.cs" />
     <Compile Include="Car.cs" />
+    <Compile Include="Cars.cs" />
     <Compile Include="CarSpecifications\CheapCarSpecification.cs" />
     <Compile Include="CompositionSpecification.cs" />
     <Compile Include="CarSpecifications\ExpensiceCarSpecification.cs" />

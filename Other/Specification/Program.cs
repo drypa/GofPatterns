@@ -1,30 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using Specification.CarSpecifications;
 
 namespace Specification
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             List<Car> cars = new List<Car>
             {
-                new Car{Color = "blue",Price = 99999,Vendor = "vaz"},
-                new Car{Color = "red",Price = 99999,Vendor = "vaz"},
-                new Car{Color = "red",Price = 50000,Vendor = "vaz"},
-                new Car{Color = "green",Price = 99999,Vendor = "vaz"},
-                new Car{Color = "orange",Price = 99999,Vendor = "vaz"},
-                new Car{Color = "blue",Price = 109999,Vendor = "vaz"},
-                new Car{Color = "red",Price = 109999,Vendor = "vaz"},
-                new Car{Color = "green",Price = 109999,Vendor = "vaz"},
-                new Car{Color = "green",Price = 2999000,Vendor = "mersedes"},
-                new Car{Color = "red",Price = 2999000,Vendor = "mersedes"},
-                new Car{Color = "red",Price = 1000000,Vendor = "mersedes"},
-                new Car{Color = "blue",Price = 2999000,Vendor = "mersedes"},
-                new Car{Color = "white",Price = 2999000,Vendor = "mersedes"},
+                new Car { Color = "blue", Price = 99999, Vendor = "vaz" },
+                new Car { Color = "red", Price = 99999, Vendor = "vaz" },
+                new Car { Color = "red", Price = 50000, Vendor = "vaz" },
+                new Car { Color = "green", Price = 99999, Vendor = "vaz" },
+                new Car { Color = "orange", Price = 99999, Vendor = "vaz" },
+                new Car { Color = "blue", Price = 109999, Vendor = "vaz" },
+                new Car { Color = "red", Price = 109999, Vendor = "vaz" },
+                new Car { Color = "green", Price = 109999, Vendor = "vaz" },
+                new Car { Color = "green", Price = 2999000, Vendor = "mersedes" },
+                new Car { Color = "red", Price = 2999000, Vendor = "mersedes" },
+                new Car { Color = "red", Price = 1000000, Vendor = "mersedes" },
+                new Car { Color = "blue", Price = 2999000, Vendor = "mersedes" },
+                new Car { Color = "white", Price = 2999000, Vendor = "mersedes" }
             };
-            ISpecification<Car> redCheapCarSpec = new RedCarSpecification().And(new CheapCarSpecification());
+            ISpecification<Car> redCheapCarSpec = Cars.Red.And(Cars.Cheap);
             Console.WriteLine("cheap red cars is:");
             foreach (Car car in cars)
             {
@@ -34,7 +33,7 @@ namespace Specification
                 }
             }
 
-            ISpecification<Car> redCheapMersedesSpec = new RedCarSpecification().And(new CheapCarSpecification()).And(new MersedesCarSpecification());
+            ISpecification<Car> redCheapMersedesSpec = Cars.Red.And(Cars.Cheap).And(Cars.Mersedes);
             Console.WriteLine("cheap red mersedes is:");
             foreach (Car car in cars)
             {
@@ -43,7 +42,7 @@ namespace Specification
                     Console.WriteLine(car.ToString());
                 }
             }
-            ISpecification<Car> redCheapNotMersedesSpec = new RedCarSpecification().And(new CheapCarSpecification()).Not(new MersedesCarSpecification());
+            ISpecification<Car> redCheapNotMersedesSpec = Cars.Red.And(Cars.Cheap).Not(Cars.Mersedes);
             Console.WriteLine("cheap red non mersedes is:");
             foreach (Car car in cars)
             {
